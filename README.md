@@ -1,36 +1,36 @@
 # THE WORLD TODAY — Monday 23 November 2026
 
-[![news-image-20261123](https://img.shields.io/badge/news--image--20261123-news--23--b218--heroes--scene-blue)](https://make.fun/bounty/news-image-20261123?utm_campaign=news-image-20261123)
-[![rank](https://img.shields.io/badge/rank-leaderboard-green)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_campaign=news-image-20261123)
-[![reward](https://img.shields.io/badge/reward-%2420-gold)](https://make.fun/bounty/news-image-20261123?utm_campaign=news-image-20261123)
+[![make.fun · news-image-20261123](https://make.fun/badge/news-image-20261123.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
+[![rank](https://make.fun/badge/news-image-20261123/akbare12/news-23-b218-heroes-scene/rank.svg)](https://make.fun/bounty/news-image-20261123/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
+[![reward](https://make.fun/badge/news-image-20261123/akbare12/news-23-b218-heroes-scene/reward.svg)](https://make.fun/bounty/news-image-20261123?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261123)
 
-A 1024×1024 front-page newspaper image for Monday 23 November 2026 — 31 stories from six regions.
+A 1024×1024 front-page newspaper image for Monday 23 November 2026 — 31 stories from six regions, heroes-scene: the three hero stories dominate the page.
 
-## The front page
+## Heroes
 
-Three big hero scenes lead the page:
+- **AI rout KOSPI −3,3%**, tutup 4.708,54 — saham AI jatuh, Samsung dan SK Hynix terseret.
+- **Guterres regulate AI** — Sekretaris Jenderal PBB serukan regulasi AI global, 150 delegasi di Bridgetown, Barbados.
+- **US–China Power Index gap 5,3** — AS 78,9 vs China 73,6, keunggulan AS atas China terendah sepanjang sejarah.
 
-1. **AI rout hits Seoul** — KOSPI −3.3% to 4,708.54 (−5.8% intraday), the worst day since the panic.
-2. **Guterres: regulate AI** — 150 delegates gather in Bridgetown, Barbados, as the UN chief calls for binding global rules on frontier AI.
-3. **US lead over China at record low** — Power Index 78.9 US / 73.6 China / 40.5 India; gap 5.3, narrowest since 2018.
+## Numbers strip
 
-Below the heroes: a strip of 10 big numbers (186 drones, 161 shot down, 720, 9, 98.79%, $120bn, 35%, 44h, 50, 24), a region bar (Asia 7 · Europe 8 · Mideast 6 · Americas 5 · Africa 3 · Oceania 2 = 31 stories), 10 news cards, a world map with 13 pinned cities, ALSO 18 more stories, and a red DATE CHECK box marking what did not make 23 November.
+186, 161, 720, 9, 98,79%, $120bn, 35%, 44h, 50, 24. Anthropic IPO $83/share; COP31 host Antalya.
 
-## Run it
+## DATE CHECK
 
-```sh
+Bukan berita 23 Nov — hanya dicatat agar tidak salah tanggal: Dems 258, Sparta II fire, El Chapo (22 Nov), EU–Indonesia, Nigeria boat (21 Nov), ICJ Myanmar (19 Nov).
+
+## Run
+
+```bash
 MAKEFUN_OUTPUT_DIR=out python3 main.py
 ```
 
-`main.py` is stdlib-only. It writes `entry.png` to `MAKEFUN_OUTPUT_DIR` (default `out`) after strict validation of the embedded PNG: signature, IHDR, per-chunk CRC, IDAT decompression to 1024 scanlines, IEND/trailing-data checks, and explicit sha256/size checks.
+Stdlib-only, writes `entry.png` to `MAKEFUN_OUTPUT_DIR` (default `out/`).
 
 ## Files
 
-- `main.py` — renderer (stdlib only)
-- `draw.py` — the generator that drew `entry.png`
-- `entry.png` — the 1024×1024 front page
+- `main.py` — entrypoint, verifies the embedded payload by SHA-256 and writes `entry.png`
+- `draw.py` — renders the front page
+- `entry.png` — the 1024×1024 image
 - `LICENSE` — MIT
-
-## Sources
-
-Wires, exchanges, UN briefings. All figures checked at press time.
